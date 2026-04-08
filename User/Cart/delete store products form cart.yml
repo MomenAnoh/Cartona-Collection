@@ -5,16 +5,23 @@ info:
 
 http:
   method: DELETE
-  url: "{{url}}/api/user/delete-store_product_from_cart/2"
+  url: "{{url}}/api/user/delete-store_product-from-cart/2"
   headers:
     - name: Accept-Language
       value: ar
   params:
-    - name: guest_id
-      value: 550e8400-e29b-41d4-a716-446655440000
+    - name: ""
+      value: ""
       type: query
       description: uuid if no login
       disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: guest_id
+        type: text
+        value: ""
+        contentType: uuid if no login
   auth:
     type: bearer
     token: "{{user_token}}"
