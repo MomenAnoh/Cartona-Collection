@@ -1,0 +1,29 @@
+info:
+  name: global-search
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/user/global-search"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Accept-Language
+      value: en
+  params:
+    - name: search
+      value: P
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

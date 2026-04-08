@@ -1,0 +1,26 @@
+info:
+  name: add
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/user/saved-items"
+  body:
+    type: multipart-form
+    data:
+      - name: product_id
+        type: text
+        value: "6"
+      - name: product_variant_id
+        type: text
+        value: "6"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

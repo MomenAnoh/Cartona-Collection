@@ -1,0 +1,32 @@
+info:
+  name: add-product-to-list
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/user/add-product-to-list"
+  body:
+    type: multipart-form
+    data:
+      - name: product_id
+        type: text
+        value: "1"
+      - name: product_variant_id
+        type: text
+        value: "3"
+      - name: store_shiping_list_id
+        type: text
+        value: "2"
+      - name: quantity
+        type: text
+        value: "1"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

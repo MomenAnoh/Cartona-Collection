@@ -1,0 +1,36 @@
+info:
+  name: logout
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/user/logout"
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: phone
+        type: text
+        value: "1093373197"
+      - name: phone_code
+        type: text
+        value: "+20"
+        disabled: true
+      - name: code
+        type: text
+        value: "12345"
+        disabled: true
+  auth:
+    type: bearer
+    token: 11|t8PgdShFeuevBHFujbLxcCGQj5jFeceuMfxZP0eCdb2399de
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

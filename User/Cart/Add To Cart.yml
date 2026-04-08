@@ -1,0 +1,37 @@
+info:
+  name: Add To Cart
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/user/add-to-cart"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: product_variant_id
+        type: text
+        value: "1"
+      - name: quantity
+        type: text
+        value: "1"
+      - name: product_id
+        type: text
+        value: "1"
+      - name: guest_id
+        type: text
+        value: 550e8400-e29b-41d4-a716-446655440000
+        description: uuid  if no loged in
+        disabled: true
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

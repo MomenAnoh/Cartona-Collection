@@ -1,0 +1,24 @@
+info:
+  name: delete account
+  type: http
+  seq: 7
+
+http:
+  method: DELETE
+  url: "{{url}}/api/user/delete-account"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Accept-Language
+      value: en
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

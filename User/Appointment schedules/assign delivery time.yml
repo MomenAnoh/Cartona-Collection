@@ -1,0 +1,32 @@
+info:
+  name: assign delivery time
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/user/assign-delivery-time"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Accept-Language
+      value: ar
+  body:
+    type: multipart-form
+    data:
+      - name: main_order_id
+        type: text
+        value: "1"
+      - name: slot_id
+        type: text
+        value: "1"
+        disabled: true
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

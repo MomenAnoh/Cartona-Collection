@@ -1,0 +1,17 @@
+info:
+  name: apply promotion
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{url}}/api/user/redeem-promotion/3"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

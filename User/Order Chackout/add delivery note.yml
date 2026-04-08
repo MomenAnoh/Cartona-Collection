@@ -1,0 +1,26 @@
+info:
+  name: add delivery note
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/api/user/add-delivery-note"
+  body:
+    type: multipart-form
+    data:
+      - name: main_order_id
+        type: text
+        value: "1"
+      - name: delivery_note
+        type: text
+        value: sfgfdsgfdgfdadf
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

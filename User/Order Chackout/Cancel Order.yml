@@ -1,0 +1,24 @@
+info:
+  name: Cancel Order
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{url}}/api/user/cancel-order?cancellation_reason_id=1"
+  headers:
+    - name: Accept-Language
+      value: ar
+  params:
+    - name: cancellation_reason_id
+      value: "1"
+      type: query
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

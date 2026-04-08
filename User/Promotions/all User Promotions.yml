@@ -1,0 +1,20 @@
+info:
+  name: all User Promotions
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/user/all-user-promotions"
+  headers:
+    - name: Accept-Language
+      value: ar
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

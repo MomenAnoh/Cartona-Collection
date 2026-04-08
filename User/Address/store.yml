@@ -1,0 +1,36 @@
+info:
+  name: store
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/user/assign-address"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Accept-Language
+      value: ar
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: longitude
+        type: text
+        value: "46.5"
+      - name: latitude
+        type: text
+        value: "24.70"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

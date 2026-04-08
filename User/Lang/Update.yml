@@ -1,0 +1,26 @@
+info:
+  name: Update
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/user/langs"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: lang
+        type: text
+        value: ar
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

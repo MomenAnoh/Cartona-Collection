@@ -1,0 +1,57 @@
+info:
+  name: add Rating
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/user/add-stores-rating"
+  headers:
+    - name: Accept-Language
+      value: ar
+  body:
+    type: json
+    data: "{\r
+
+      \    \"store_ratings\": [\r
+
+      \        {\r
+
+      \            \"store_id\": 3,\r
+
+      \            \"rating\": 5\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"store_id\": 2,\r
+
+      \            \"rating\": 4\r
+
+      \        }\r
+
+      \    \r
+
+      \    ],\r
+
+      \    \"app_rating\": {\r
+
+      \        \"rating\": 4,\r
+
+      \        \"note\": \"تجربة ممتازة والتوصيل سريع جداً\",\r
+
+      \        \"review_tag_ids\": [1, 2, 5]\r
+
+      \    }\r
+
+      }"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

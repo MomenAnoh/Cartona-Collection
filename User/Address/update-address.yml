@@ -1,0 +1,33 @@
+info:
+  name: update-address
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/api/user/address/1"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: longitude
+        type: text
+        value: "47.20"
+      - name: latitude
+        type: text
+        value: "25.00"
+      - name: name
+        type: text
+        value: Momen home
+        disabled: true
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

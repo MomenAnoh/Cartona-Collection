@@ -1,0 +1,29 @@
+info:
+  name: apply coupon
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/user/apply-coupon"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: main_order_id
+        type: text
+        value: "3"
+      - name: coupon_code
+        type: text
+        value: AED21OFF
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

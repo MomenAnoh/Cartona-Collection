@@ -1,0 +1,32 @@
+info:
+  name: prfile
+  type: http
+  seq: 3
+
+http:
+  method: GET
+  url: "{{url}}/api/user/profile"
+  headers:
+    - name: Accept
+      value: Applicaiton-json
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: code
+        type: text
+        value: "12345"
+        disabled: true
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,20 @@
+opencollection: 1.0.0
+
+info:
+  name: Cartona
+
+request:
+  auth:
+    type: bearer
+    token: 3|Bg9Ndz1bjl0dL3dJV3EAugJNHNyZ6uRG4hMTgIS1e08dc488
+  variables:
+    - name: url
+      value: ""
+    - name: user_token
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

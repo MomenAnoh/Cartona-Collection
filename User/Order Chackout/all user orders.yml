@@ -1,0 +1,23 @@
+info:
+  name: all user orders
+  type: http
+  seq: 7
+
+http:
+  method: GET
+  url: "{{url}}/api/user/all-user-orders?search=Current"
+  params:
+    - name: search
+      value: Current
+      type: query
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,42 @@
+info:
+  name: update profile
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/user/update-profile"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Accept-Language
+      value: ar
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: first_name
+        type: text
+        value: momen
+      - name: last_name
+        type: text
+        value: ahmed
+      - name: phone
+        type: text
+        value: "1093373197"
+      - name: phone_code
+        type: text
+        value: "+20"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

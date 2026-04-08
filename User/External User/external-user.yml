@@ -1,0 +1,38 @@
+info:
+  name: external-user
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/api/user/add-external-user"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: first_name
+        type: text
+        value: dsdzsf
+      - name: last_name
+        type: text
+        value: dsafdsa
+      - name: email
+        type: text
+        value: momdsafdsfden@gmail.com
+      - name: latitude
+        type: text
+        value: "55"
+      - name: longitude
+        type: text
+        value: "6566"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

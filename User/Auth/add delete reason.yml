@@ -1,0 +1,30 @@
+info:
+  name: add delete reason
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/api/user/delete-resounses"
+  headers:
+    - name: Accept-Language
+      value: ar
+  body:
+    type: multipart-form
+    data:
+      - name: reason_id
+        type: text
+        value: "1"
+      - name: reason
+        type: text
+        value: adgdsg
+        description: any string
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
