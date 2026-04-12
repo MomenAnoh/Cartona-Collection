@@ -5,17 +5,21 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/stores/1"
+  url: "{{url}}/api/user/stores/1?guestId=550e8400-e29b-41d4-a716-446655440000"
   headers:
     - name: Accept
       value: application/json
     - name: Accept-Language
       value: ar
+  params:
+    - name: guestId
+      value: 550e8400-e29b-41d4-a716-446655440000
+      type: query
   body:
     type: multipart-form
   auth:
     type: bearer
-    token: "{{user_token}}"
+    token: ""
 
 settings:
   encodeUrl: true
