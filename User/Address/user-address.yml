@@ -5,8 +5,13 @@ info:
 
 http:
   method: GET
-  url: ""
-  auth: inherit
+  url: "{{url}}/api/user/user-address"
+  headers:
+    - name: Accept
+      value: application/json
+  auth:
+    type: bearer
+    token: "{{user_token}}"
 
 settings:
   encodeUrl: true

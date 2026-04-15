@@ -12,12 +12,12 @@ http:
   body:
     type: multipart-form
     data:
-      - name: main_order_id
+      - name: order_id
         type: text
-        value: "3"
+        value: "1"
       - name: coupon_code
         type: text
-        value: AED21OFF
+        value: WELCOME20
   auth:
     type: bearer
     token: "{{user_token}}"

@@ -1,14 +1,12 @@
 info:
-  name: get schedules
+  name: add
   type: http
   seq: 1
 
 http:
   method: GET
-  url: "{{url}}/api/user/appointment-schedule"
-  auth:
-    type: bearer
-    token: "{{user_token}}"
+  url: ""
+  auth: inherit
 
 settings:
   encodeUrl: true

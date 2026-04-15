@@ -5,7 +5,7 @@ info:
 
 http:
   method: DELETE
-  url: "{{url}}/api/user/delete-from-cart/1"
+  url: "{{url}}/api/user/delete-from-cart/3"
   headers:
     - name: Accept
       value: application/json
@@ -22,6 +22,7 @@ http:
         type: text
         value: ""
         contentType: uuid if no login
+        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"

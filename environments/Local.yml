@@ -1,4 +1,6 @@
-name: url
+name: Local
 variables:
   - name: url
     value: http://127.0.0.1:8000
+  - name: user_token
+    value: Bearer 3|sJOxHodyWcHsCy6cWv2SoVe1MzQK38IlOT2Gcukj6c2f69c9

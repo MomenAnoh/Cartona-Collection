@@ -6,6 +6,9 @@ info:
 http:
   method: GET
   url: "{{url}}/api/user/cart"
+  headers:
+    - name: Accept
+      value: application/json
   params:
     - name: guest_id
       value: 550e8400-e29b-41d4-a716-446655440000
