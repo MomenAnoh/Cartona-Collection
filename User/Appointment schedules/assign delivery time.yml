@@ -14,13 +14,12 @@ http:
   body:
     type: multipart-form
     data:
-      - name: main_order_id
+      - name: order_id
         type: text
         value: "1"
       - name: slot_id
         type: text
         value: "1"
-        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"

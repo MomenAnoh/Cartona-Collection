@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/redeem-promotion/3"
+  url: "{{url}}/api/user/redeem-promotion/3?order_id=4"
+  params:
+    - name: order_id
+      value: "4"
+      type: query
   auth:
     type: bearer
     token: "{{user_token}}"

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/api/user/address/1"
+  url: "{{url}}/api/user/address"
   headers:
     - name: Accept
       value: application/json

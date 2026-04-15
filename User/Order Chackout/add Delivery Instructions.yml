@@ -12,9 +12,9 @@ http:
   body:
     type: multipart-form
     data:
-      - name: main_order_id
+      - name: order_id
         type: text
-        value: "5"
+        value: "1"
       - name: delivery_instructions
         type: text
         value: put it front of the home
