@@ -1,7 +1,7 @@
 info:
   name: Cancel Order
   type: http
-  seq: 11
+  seq: 10
 
 http:
   method: GET

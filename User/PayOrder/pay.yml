@@ -4,8 +4,14 @@ info:
   seq: 1
 
 http:
-  method: GET
+  method: POST
   url: "{{url}}/api/user/pay-order"
+  body:
+    type: multipart-form
+    data:
+      - name: delivery_instructions
+        type: text
+        value: dzgfdsgdfgdfgg
   auth:
     type: bearer
     token: "{{user_token}}"
