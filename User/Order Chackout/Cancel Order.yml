@@ -5,12 +5,15 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/cancel-order?cancellation_reason_id=1"
+  url: "{{url}}/api/user/cancel-order?cancellation_reason_id=1&order_id=1"
   headers:
     - name: Accept-Language
       value: ar
   params:
     - name: cancellation_reason_id
+      value: "1"
+      type: query
+    - name: order_id
       value: "1"
       type: query
   auth:
