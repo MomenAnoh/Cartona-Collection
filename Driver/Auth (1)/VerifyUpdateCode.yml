@@ -1,0 +1,34 @@
+info:
+  name: VerifyUpdateCode
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/api/driver/verify-update-code"
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: phone
+        type: text
+        value: "1093373111"
+      - name: phone_code
+        type: text
+        value: "+20"
+      - name: code
+        type: text
+        value: "12345"
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

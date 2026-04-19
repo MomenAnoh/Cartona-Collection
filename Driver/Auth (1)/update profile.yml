@@ -1,0 +1,36 @@
+info:
+  name: update profile
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/api/driver/update-phone"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Accept-Language
+      value: ar
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: phone
+        type: text
+        value: "1093373111"
+      - name: phone_code
+        type: text
+        value: "+20"
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

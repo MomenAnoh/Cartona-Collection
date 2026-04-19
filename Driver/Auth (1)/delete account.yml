@@ -1,0 +1,28 @@
+info:
+  name: delete account
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: "{{url}}/api/driver/delete-account"
+  headers:
+    - name: Accept
+      value: application/json
+    - name: Accept-Language
+      value: en
+  body:
+    type: multipart-form
+    data:
+      - name: reason
+        type: text
+        value: ""
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
