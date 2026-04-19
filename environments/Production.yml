@@ -1,6 +1,6 @@
 name: Production
 variables:
   - name: url
-    value: https://polemoniaceous-neriah-cofinal.ngrok-free.dev
+    value: https://cartona.nami-tec.com
   - name: user_token
     value: Bearer 8|BANzAt7r95lhUXhtDW1BkWosmsoZtgkdJpDLHSu0d033bfef
