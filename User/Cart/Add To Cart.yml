@@ -17,10 +17,10 @@ http:
         value: "1"
       - name: quantity
         type: text
-        value: "20"
+        value: "10"
       - name: product_id
         type: text
-        value: "1"
+        value: "2"
       - name: guest_id
         type: text
         value: 550e8400-e29b-41d4-a716-446655440000

@@ -5,11 +5,12 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/all-user-orders?search=Current"
+  url: "{{url}}/api/user/all-user-orders"
   params:
     - name: search
       value: Current
       type: query
+      disabled: true
   body:
     type: multipart-form
   auth:
