@@ -10,42 +10,20 @@ http:
     - name: Accept-Language
       value: ar
   body:
-    type: json
-    data: "{\r
-
-      \    \"store_ratings\": [\r
-
-      \        {\r
-
-      \            \"store_id\": 3,\r
-
-      \            \"rating\": 5\r
-
-      \        },\r
-
-      \        {\r
-
-      \            \"store_id\": 2,\r
-
-      \            \"rating\": 4\r
-
-      \        }\r
-
-      \    \r
-
-      \    ],\r
-
-      \    \"app_rating\": {\r
-
-      \        \"rating\": 4,\r
-
-      \        \"note\": \"تجربة ممتازة والتوصيل سريع جداً\",\r
-
-      \        \"review_tag_ids\": [1, 2, 5]\r
-
-      \    }\r
-
-      }"
+    type: multipart-form
+    data:
+      - name: store[0][store_id]
+        type: text
+        value: "1"
+      - name: store[0][store_rate]
+        type: text
+        value: "5"
+      - name: app_rating
+        type: text
+        value: "5"
+      - name: note
+        type: text
+        value: gfgdnhdgfhdyg
   auth:
     type: bearer
     token: "{{user_token}}"
