@@ -5,8 +5,13 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/drvier/about"
-  auth: inherit
+  url: "{{url}}/api/driver/about"
+  headers:
+    - name: Accept-Language
+      value: ar
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
 
 settings:
   encodeUrl: true

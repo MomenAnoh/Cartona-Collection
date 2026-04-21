@@ -4,9 +4,26 @@ info:
   seq: 1
 
 http:
-  method: GET
+  method: POST
   url: "{{url}}/api/driver/help"
-  auth: inherit
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: reason
+        type: text
+        value: asdgasdg
+      - name: order_number
+        type: text
+        value: "1"
+      - name: message
+        type: text
+        value: dsfdsfds
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
 
 settings:
   encodeUrl: true
