@@ -1,0 +1,37 @@
+info:
+  name: add store invoice
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/api/driver/add-store-invoice"
+  headers:
+    - name: Accept
+      value: application/json
+  params:
+    - name: ""
+      value: ""
+      type: query
+  body:
+    type: multipart-form
+    data:
+      - name: order_id
+        type: text
+        value: "1"
+      - name: store_id
+        type: text
+        value: "1"
+      - name: image
+        type: file
+        value:
+          - /home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-10 13-02-23.png
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

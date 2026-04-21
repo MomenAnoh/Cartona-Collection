@@ -1,0 +1,19 @@
+info:
+  name: delete store list
+  type: http
+  seq: 4
+
+http:
+  method: DELETE
+  url: "{{url}}/api/user/delete-lists/2"
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
