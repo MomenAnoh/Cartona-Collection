@@ -34,6 +34,11 @@ http:
       disabled: true
   body:
     type: multipart-form
+    data:
+      - name: guest_id
+        type: text
+        value: asdgdsg
+        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"

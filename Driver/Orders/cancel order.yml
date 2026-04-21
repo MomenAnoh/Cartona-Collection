@@ -5,8 +5,16 @@ info:
 
 http:
   method: GET
-  url: /api/driver/cancel-order/1
-  auth: inherit
+  url: "{{url}}/api/driver/cancel-order/7?reason=asgrsdgsad"
+  params:
+    - name: reason
+      value: asgrsdgsad
+      type: query
+  body:
+    type: multipart-form
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
 
 settings:
   encodeUrl: true

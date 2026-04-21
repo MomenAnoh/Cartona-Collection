@@ -1,0 +1,29 @@
+info:
+  name: add complaint
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/api/driver/add-complaint"
+  headers:
+    - name: Accept
+      value: application/json
+  body:
+    type: multipart-form
+    data:
+      - name: order_id
+        type: text
+        value: "1"
+      - name: text
+        type: text
+        value: fadsgadrsfg
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
