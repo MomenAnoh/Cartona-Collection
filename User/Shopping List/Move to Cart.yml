@@ -5,8 +5,10 @@ info:
 
 http:
   method: GET
-  url: ""
-  auth: inherit
+  url: "{{url}}/api/usermove-list-to-cart/1"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
 
 settings:
   encodeUrl: true
