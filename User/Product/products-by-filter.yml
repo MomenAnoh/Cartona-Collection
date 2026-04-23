@@ -5,17 +5,16 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/products-by-filter/?store_id=1"
+  url: "{{url}}/api/user/products-by-filter/?store_id=1&search=c"
   params:
     - name: store_id
       value: "1"
       type: query
       description: if you need store product
     - name: search
-      value: h
+      value: c
       type: query
       description: search in store product
-      disabled: true
     - name: store_shiping_list_id
       value: "4"
       type: query

@@ -5,7 +5,10 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/categories-has-discount-products/2"
+  url: "{{url}}/api/user/categories-has-discount-products/1"
+  headers:
+    - name: Accept-Language
+      value: ar
   auth: inherit
 
 settings:
