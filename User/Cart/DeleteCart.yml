@@ -24,6 +24,7 @@ http:
         type: text
         value: ""
         contentType: uuid if no login
+        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"

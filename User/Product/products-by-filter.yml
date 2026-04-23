@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/products-by-filter/?store_id=1&search=h"
+  url: "{{url}}/api/user/products-by-filter/?store_id=1"
   params:
     - name: store_id
       value: "1"
@@ -15,6 +15,7 @@ http:
       value: h
       type: query
       description: search in store product
+      disabled: true
     - name: store_shiping_list_id
       value: "4"
       type: query

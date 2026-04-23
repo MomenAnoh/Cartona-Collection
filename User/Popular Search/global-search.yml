@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/api/user/global-search?search=Pfdsagsdgdsafg"
+  url: "{{url}}/api/user/global-search"
   headers:
     - name: Accept
       value: application/json
@@ -15,6 +15,7 @@ http:
     - name: search
       value: Pfdsagsdgdsafg
       type: query
+      disabled: true
   body:
     type: multipart-form
   auth:
