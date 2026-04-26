@@ -6,7 +6,9 @@ info:
 http:
   method: GET
   url: "{{url}}/api/user/terms"
-  auth: inherit
+  auth:
+    type: bearer
+    token: "{{user_token}}"
 
 settings:
   encodeUrl: true

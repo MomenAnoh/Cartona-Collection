@@ -17,7 +17,7 @@ http:
         value: ar
   auth:
     type: bearer
-    token: "{{user_token}}"
+    token: "{{driver_token}}"
 
 settings:
   encodeUrl: true

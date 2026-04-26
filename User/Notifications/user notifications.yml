@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/all-notifications"
+  url: "{{url}}/api/user/all-notifications?page=2"
+  params:
+    - name: page
+      value: "2"
+      type: query
   auth:
     type: bearer
     token: "{{user_token}}"
