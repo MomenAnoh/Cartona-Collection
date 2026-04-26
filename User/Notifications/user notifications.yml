@@ -1,0 +1,17 @@
+info:
+  name: user notifications
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: "{{url}}/api/user/all-notifications"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
