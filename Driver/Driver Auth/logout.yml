@@ -13,6 +13,10 @@ http:
       disabled: true
   body:
     type: multipart-form
+    data:
+      - name: fcm_token
+        type: text
+        value: ""
   auth:
     type: bearer
     token: "{{driver_token}}"

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/api/user/store-fcm"
+  url: "{{url}}/api/driver/store-fcm"
   body:
     type: multipart-form
     data:

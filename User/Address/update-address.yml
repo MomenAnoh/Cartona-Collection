@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/api/user/address"
+  url: "{{url}}/api/user/address/49"
   headers:
     - name: Accept
       value: application/json
@@ -15,13 +15,14 @@ http:
       - name: longitude
         type: text
         value: "47.20"
+        disabled: true
       - name: latitude
         type: text
         value: "25.00"
-      - name: name
+        disabled: true
+      - name: first_name
         type: text
         value: Momen home
-        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"
