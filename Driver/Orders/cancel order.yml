@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/driver/cancel-order/7?reason=asgrsdgsad"
+  url: "{{url}}/api/driver/cancel-order/2?reason=asgrsdgsad"
   params:
     - name: reason
       value: asgrsdgsad

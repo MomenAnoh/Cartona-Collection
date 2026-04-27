@@ -1,0 +1,23 @@
+info:
+  name: assign token
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/api/user/store-fcm"
+  body:
+    type: multipart-form
+    data:
+      - name: token
+        type: text
+        value: fbF2zUyOQuWbiONkSZR2Ry:APA91bHnpHqbdaWtKInsEt4Gb5kyBgiAs0-ZTPcPTYnJtLee9oWdSWG0HNCODT2AJsoHQnUGttHb_7sfrGa3EC_ybZyNuUPL4gACPZ4wdasrWOLxQYXwIDs
+  auth:
+    type: bearer
+    token: "{{user_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
