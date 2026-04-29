@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/driver/get-order/5"
+  url: "{{url}}/api/driver/get-order/69"
   auth:
     type: bearer
     token: "{{driver_token}}"
