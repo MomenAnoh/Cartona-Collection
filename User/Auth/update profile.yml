@@ -28,9 +28,11 @@ http:
       - name: phone
         type: text
         value: "1093373197"
+        disabled: true
       - name: phone_code
         type: text
         value: "+20"
+        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"

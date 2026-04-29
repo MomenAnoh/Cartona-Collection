@@ -1,18 +1,18 @@
 info:
-  name: driver order
+  name: sub category by category
   type: http
   seq: 3
 
 http:
   method: GET
-  url: "{{url}}/api/driver/driver-orders?type=delivered"
+  url: "{{url}}/api/user/sub-category?store_category_id="
   params:
-    - name: type
-      value: delivered
+    - name: store_category_id
+      value: ""
       type: query
   auth:
     type: bearer
-    token: "{{driver_token}}"
+    token: "{{user_token}}"
 
 settings:
   encodeUrl: true

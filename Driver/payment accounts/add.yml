@@ -1,30 +1,29 @@
 info:
-  name: update-address
+  name: add
   type: http
-  seq: 5
+  seq: 2
 
 http:
   method: POST
-  url: "{{url}}/api/user/address/1"
+  url: "{{url}}/api/driver/payment-account"
   headers:
     - name: Accept
       value: application/json
   body:
     type: multipart-form
     data:
-      - name: longitude
+      - name: title
         type: text
-        value: "46.60"
-      - name: latitude
+        value: adgadsfgdsf
+      - name: card_number
         type: text
-        value: "24.70"
-      - name: first_name
+        value: "6546545125151"
+      - name: is_primary
         type: text
-        value: Momen home
-        disabled: true
+        value: "1"
   auth:
     type: bearer
-    token: "{{user_token}}"
+    token: "{{driver_token}}"
 
 settings:
   encodeUrl: true

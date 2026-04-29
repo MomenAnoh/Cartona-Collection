@@ -14,7 +14,7 @@ http:
     data:
       - name: product_variant_id
         type: text
-        value: "1"
+        value: "3"
       - name: quantity
         type: text
         value: "10"

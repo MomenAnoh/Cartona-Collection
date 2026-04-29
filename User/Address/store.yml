@@ -21,10 +21,13 @@ http:
     data:
       - name: longitude
         type: text
-        value: "45446.5"
+        value: "46.528896018862724"
       - name: latitude
         type: text
-        value: "245.70"
+        value: "24.657624686404194"
+      - name: store
+        type: text
+        value: "true"
   auth:
     type: bearer
     token: "{{user_token}}"

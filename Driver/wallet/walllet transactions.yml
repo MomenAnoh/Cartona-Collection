@@ -1,15 +1,11 @@
 info:
-  name: driver order
+  name: walllet transactions
   type: http
-  seq: 3
+  seq: 1
 
 http:
   method: GET
-  url: "{{url}}/api/driver/driver-orders?type=delivered"
-  params:
-    - name: type
-      value: delivered
-      type: query
+  url: "{{url}}/api/driver/user-walllet-transactions"
   auth:
     type: bearer
     token: "{{driver_token}}"

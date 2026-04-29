@@ -5,12 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/driver/order"
+  url: "{{url}}/api/driver/order?filter=pending"
   params:
     - name: filter
-      value: going
+      value: pending
       type: query
-      disabled: true
     - name: slot_id
       value: "2"
       type: query

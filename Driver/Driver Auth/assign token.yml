@@ -14,7 +14,7 @@ http:
         value: fbF2zUyOQuWbiONkSZR2Ry:APA91bHnpHqbdaWtKInsEt4Gb5kyBgiAs0-ZTPcPTYnJtLee9oWdSWG0HNCODT2AJsoHQnUGttHb_7sfrGa3EC_ybZyNuUPL4gACPZ4wdasrWOLxQYXwIDs
   auth:
     type: bearer
-    token: "{{user_token}}"
+    token: "{{driver_token}}"
 
 settings:
   encodeUrl: true
