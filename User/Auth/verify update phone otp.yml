@@ -4,11 +4,23 @@ info:
   seq: 12
 
 http:
-  method: GET
+  method: POST
   url: "{{url}}/api/user/verify-update-phone-otp"
   body:
     type: multipart-form
-  auth: inherit
+    data:
+      - name: phone_code
+        type: text
+        value: "+20"
+      - name: phone
+        type: text
+        value: "8888888888"
+      - name: code
+        type: text
+        value: "12345"
+  auth:
+    type: bearer
+    token: "{{user_token}}"
 
 settings:
   encodeUrl: true
