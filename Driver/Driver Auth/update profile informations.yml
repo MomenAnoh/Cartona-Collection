@@ -1,0 +1,27 @@
+info:
+  name: update profile informations
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/api/driver/update-profile-informations"
+  body:
+    type: multipart-form
+    data:
+      - name: photo
+        type: file
+        value:
+          - /home/momenanoh/Pictures/Screenshots/Screenshot from 2026-04-15 14-15-59.png
+      - name: full_name
+        type: text
+        value: asgddsgdsg
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
