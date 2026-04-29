@@ -1,0 +1,24 @@
+info:
+  name: get-order-product
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: "{{url}}/api/driver/get-order-product?product_id=&varient_id="
+  params:
+    - name: product_id
+      value: ""
+      type: query
+    - name: varient_id
+      value: ""
+      type: query
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

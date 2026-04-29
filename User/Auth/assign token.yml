@@ -11,7 +11,7 @@ http:
     data:
       - name: token
         type: text
-        value: fbF2zUyOQuWbiONkSZR2Ry:APA91bHnpHqbdaWtKInsEt4Gb5kyBgiAs0-ZTPcPTYnJtLee9oWdSWG0HNCODT2AJsoHQnUGttHb_7sfrGa3EC_ybZyNuUPL4gACPZ4wdasrWOLxQYXwIDs
+        value: dLtKdaaJT2G2Fzo14SVFar:APA91bFGmBxg2HEMsJdkFDz8m5mFNrX0kDRNp7NcPQcvzZIpjq-mSRCGN_80ZxuxPnzuSFufkkr4MdgWMZaTbL4wRHiJY52pdDeock81G8JikrZVWOH0gNk
   auth:
     type: bearer
     token: "{{user_token}}"
