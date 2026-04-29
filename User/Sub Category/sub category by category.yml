@@ -5,11 +5,12 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/sub-category?store_category_id="
+  url: "{{url}}/api/user/sub-category"
   params:
     - name: store_category_id
-      value: ""
+      value: "1"
       type: query
+      disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"
