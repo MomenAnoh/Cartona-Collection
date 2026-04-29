@@ -8,7 +8,7 @@ http:
   url: "{{url}}/api/user/get-store-global-search/3"
   auth:
     type: bearer
-    token: "{{user_token}}"
+    token: "{{user_token }}"
 
 settings:
   encodeUrl: true
