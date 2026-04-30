@@ -6,6 +6,8 @@ info:
 http:
   method: GET
   url: "{{url}}/api/driver/user-walllet-transactions"
+  body:
+    type: multipart-form
   auth:
     type: bearer
     token: "{{driver_token}}"

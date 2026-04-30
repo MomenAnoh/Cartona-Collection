@@ -5,12 +5,16 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/products-by-sub-category/1"
+  url: "{{url}}/api/user/products-by-sub-category/1?product_id=32"
   headers:
     - name: Accept
       value: application/json
     - name: Accept-Language
       value: ar
+  params:
+    - name: product_id
+      value: "32"
+      type: query
   body:
     type: multipart-form
   auth:

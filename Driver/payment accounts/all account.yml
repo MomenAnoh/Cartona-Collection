@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/driver/driver-walllet-transactions"
+  url: "{{url}}/api/driver/payment-account"
   auth:
     type: bearer
     token: "{{driver_token}}"

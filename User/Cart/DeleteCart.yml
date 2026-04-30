@@ -11,20 +11,13 @@ http:
       value: application/json
     - name: Accept-Language
       value: ar
-  params:
-    - name: guest_id
-      value: 550e8400-e29b-41d4-a716-446655440000
-      type: query
-      description: uuid if no login
-      disabled: true
   body:
     type: multipart-form
     data:
       - name: guest_id
         type: text
-        value: ""
+        value: 550e8400-e29b-41d4-a716-446655440000
         contentType: uuid if no login
-        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"

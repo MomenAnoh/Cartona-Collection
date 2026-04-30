@@ -1,11 +1,11 @@
 info:
-  name: getOrder
+  name: driver wallet information
   type: http
-  seq: 11
+  seq: 10
 
 http:
   method: GET
-  url: "{{url}}/api/driver/get-order/8"
+  url: "{{url}}/api/driver/driver-wallet-info"
   auth:
     type: bearer
     token: "{{driver_token}}"

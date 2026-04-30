@@ -1,0 +1,27 @@
+info:
+  name: withdrawal
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/api/driver/withdrawal"
+  params:
+    - name: ""
+      value: ""
+      type: query
+  body:
+    type: multipart-form
+    data:
+      - name: amount
+        type: text
+        value: "50"
+  auth:
+    type: bearer
+    token: "{{driver_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

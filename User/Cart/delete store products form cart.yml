@@ -9,6 +9,8 @@ http:
   headers:
     - name: Accept-Language
       value: ar
+    - name: Accept
+      value: application/json
   params:
     - name: ""
       value: ""
@@ -20,7 +22,7 @@ http:
     data:
       - name: guest_id
         type: text
-        value: ""
+        value: 550e8400-e29b-41d4-a716-446655440000
         contentType: uuid if no login
   auth:
     type: bearer

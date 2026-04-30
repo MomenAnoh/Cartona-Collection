@@ -12,6 +12,9 @@ http:
       - name: delivery_instructions
         type: text
         value: dzgfdsgdfgdfgg
+      - name: payment_method
+        type: text
+        value: paypal
   auth:
     type: bearer
     token: "{{user_token}}"

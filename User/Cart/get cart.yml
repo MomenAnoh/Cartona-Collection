@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/user/cart"
+  url: "{{url}}/api/user/cart?guest_id=550e8400-e29b-41d4-a716-446655440000"
   headers:
     - name: Accept
       value: application/json
@@ -14,15 +14,8 @@ http:
       value: 550e8400-e29b-41d4-a716-446655440000
       type: query
       description: uuid if no login
-      disabled: true
   body:
     type: multipart-form
-    data:
-      - name: guest_id
-        type: text
-        value: ""
-        contentType: uuid if no login
-        disabled: true
   auth:
     type: bearer
     token: "{{user_token}}"
