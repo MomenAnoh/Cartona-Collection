@@ -6,6 +6,9 @@ info:
 http:
   method: GET
   url: "{{url}}/api/user/terms"
+  headers:
+    - name: Accept-Language
+      value: ar
   auth:
     type: bearer
     token: "{{user_token}}"
