@@ -5,10 +5,10 @@ info:
 
 http:
   method: POST
-  url: "{{url}}/api/driver/withdrawal"
+  url: "{{url}}/api/driver/withdrawal?account_id=1"
   params:
-    - name: ""
-      value: ""
+    - name: account_id
+      value: "1"
       type: query
   body:
     type: multipart-form
