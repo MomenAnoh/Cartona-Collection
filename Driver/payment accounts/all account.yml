@@ -5,7 +5,11 @@ info:
 
 http:
   method: GET
-  url: "{{url}}/api/driver/payment-account"
+  url: "{{url}}/api/driver/payment-account?page=2"
+  params:
+    - name: page
+      value: "2"
+      type: query
   auth:
     type: bearer
     token: "{{driver_token}}"
