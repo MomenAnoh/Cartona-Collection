@@ -19,7 +19,7 @@ http:
     data:
       - name: phone
         type: text
-        value: "1093373197"
+        value: "1234567890"
       - name: phone_code
         type: text
         value: "+20"
@@ -31,9 +31,6 @@ http:
         value: 550e8400-e29b-41d4-a716-446655440000
         contentType: uuid if has cart
         disabled: true
-      - name: user_is_old
-        type: text
-        value: "false"
       - name: referal_code
         type: text
         value: 6F4AMLGC
